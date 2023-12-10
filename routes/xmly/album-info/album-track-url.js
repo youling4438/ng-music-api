@@ -2,8 +2,8 @@ const request = require('request');
 const { BASE_URL } = require('../config');
 const { stringify } = require('qs');
 module.exports = (req, res) => {
-  const query = { ptype: 1, id: req.params.trackId };
-  const url = `${BASE_URL}/play/v1/audio?${stringify(query)}`;
+  const query = { trackIds: req.params.trackId };
+  const url = `${BASE_URL}/play/tracks?${stringify(query)}`;
   request({
     url,
     headers: {

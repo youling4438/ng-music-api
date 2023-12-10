@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3333;
+const PORT = process.env.PORT || 4444;
 const routes = require('./routes');
 app.set('view engine', 'ejs');
 app.use(express.json());
@@ -30,5 +30,5 @@ app.use(function (err, req, res, next) {
   res.status(500).json('something wrong');
 });
 app.listen(PORT, function () {
-  console.log('Listen at http://localhost:3333/docs')
+  console.log('Listen at http://localhost:4444/docs')
 });
